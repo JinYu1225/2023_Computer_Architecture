@@ -12,6 +12,9 @@ threshold: .byte 0x80
 mask1: .word 0x55555555
 mask2: .word 0x33333333
 mask4: .word 0x0f0f0f0f
+str1: .string " "
+str2: .string "\nThe Binarization Result:\n"
+
 .text
 main:
     # a1 = address of pixel
@@ -44,6 +47,10 @@ STORE_MOVE:
     
     li s1, 5           # make count for RESULT_CHECK
     sub a2, a2, s1     # reset address of result
+    
+    la a0, str2        # start to print the result
+    li a7, 4
+    ecall
 RESULT_CHECK:
     lbu a0, 0(a2)                # load result to a0
     jal ra, PRINT_INT
@@ -101,6 +108,13 @@ POPCNT:
 PRINT_INT:
     li a7, 1          # print the value of input a0 in int
     ecall
+    addi sp, sp, -4
+    sw a0, 0(sp)
+    la a0, str1
+    li a7, 4
+    ecall
+    lw a0, 0(sp)
+    addi sp, sp, 4
     ret
     
 EXIT:

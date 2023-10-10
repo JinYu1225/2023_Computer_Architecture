@@ -22,7 +22,7 @@ int main(){
     // pixel test
     // 8-bit color depth for black and white photo
     uint32_t picture[5] = {20,80,128,150,231};
-    uint32_t threshold = 230;
+    uint32_t threshold = 128;
     uint32_t *pixel = &picture;
 
     for(int i = 0; i < 5; i++){
