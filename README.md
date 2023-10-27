@@ -1,7 +1,7 @@
 # 2023_Computer_Architecture  
 Here will upload the projects related to "Computer Architecture" in 2023.    
 ------------------------------------------------------------------------  
-# HW1
+# Assignment 1: RISC-V Assembly and Instruction Pipeline
 The goal of Homework 1 is to modify the concepts that was illustrated in  
 the [Quiz1_2023](https://hackmd.io/@sysprog/arch2023-quiz1-sol).  
 We should choose one concept from Problem A to C, transfer the C code to  
@@ -15,7 +15,7 @@ smaller than the "Threshold". And convert to 255 if bigger.
 * The CLZ concept is mainly used in comparing the scalar of the elements.  
 * The [note page](https://hackmd.io/@edenlin/BkuFYLOxa) is proposed.  
   
-## Assignment 2: GNU Toolchain  
+# Assignment 2: GNU Toolchain  
 In Assignment 2, we were asked for modifying other students' code and  
 optimizing it by the [rv32emu](https://github.com/sysprog21/rv32emu).  
 We need to learn how the emulator work in this assignment and analyze the  
